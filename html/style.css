@@ -1,0 +1,122 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: transparent;
+    color: #ecf0f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Remove or comment out the background-blur class */
+.background-blur {
+    display: none; /* Ensure it is hidden */
+}
+
+.watermark {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: #ff79c6;
+    animation: fadeIn 2s infinite alternate;
+    z-index: 2;
+}
+
+.server-name {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #ff79c6;
+    animation: fadeIn 2s;
+}
+
+.menu, .form {
+    display: none; /* Hidden by default */
+    text-align: center;
+    padding: 30px; /* Increase padding for more space */
+    border: 2px solid;
+    border-image: linear-gradient(45deg, #8a2be2, #ff79c6, #8a2be2) 1; /* Adjusted to vaporwave colors */
+    border-radius: 10px;
+    background-color: #282a36;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 3;
+    animation: fadeIn 1s;
+    width: 600px; /* Increased width */
+    max-width: 80%; /* Ensure responsiveness */
+}
+
+.animated-text {
+    font-size: 28px; /* Increased font size */
+    margin-bottom: 20px;
+    animation: fadeIn 2s;
+    color: #ff79c6;
+}
+
+.animated-button {
+    padding: 12px 24px; /* Increased padding */
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #8be9fd;
+    color: #282a36;
+    font-size: 18px; /* Increased font size */
+    transition: background-color 0.3s, transform 0.3s;
+    animation: fadeInUp 1s;
+}
+
+.animated-button:hover {
+    background-color: #50fa7b;
+    transform: scale(1.05);
+    outline: none;
+}
+
+button:disabled {
+    background-color: #6272a4;
+}
+
+input, textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #6272a4;
+    border-radius: 5px;
+    background-color: #44475a;
+    color: #f8f8f2;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes borderAnimation {
+    0% {
+        border-image: linear-gradient(45deg, #8a2be2, #ff79c6) 1;
+    }
+    100% {
+        border-image: linear-gradient(45deg, #ff79c6, #8a2be2) 1;
+    }
+}
+
+.menu, .form {
+    animation: borderAnimation 3s linear infinite;
+}

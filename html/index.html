@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Report System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="backgroundBlur" class="background-blur"></div>
+    <div id="menu" class="menu">
+        <h1 class="animated-text">Report Menu</h1>
+        <button class="animated-button" onclick="playClickSound(); openForm('playerReport')">Report Player</button>
+        <button class="animated-button" onclick="playClickSound(); openForm('bugReport')">Report Bug</button>
+    </div>
+
+    <div id="playerReport" class="form">
+        <h1 class="animated-text">Report Player</h1>
+        <div id="serverName" class="server-name">This will be seen by the admin team shortly</div>
+        <input type="text" id="reportTitle" placeholder="Title">
+        <textarea id="reportDescription" placeholder="Description"></textarea>
+        <input type="text" id="discordName" placeholder="Your Discord">
+        <button class="animated-button" onclick="playSubmitSound(); submitPlayerReport()">Submit</button>
+        <button class="animated-button" onclick="playClickSound(); closeForm()">Cancel</button>
+    </div>
+
+    <div id="bugReport" class="form">
+        <h1 class="animated-text">Report Bug</h1>
+        <div id="serverName" class="server-name">This will be seen by the Developer team</div>
+        <textarea id="bugDescription" placeholder="Description"></textarea>
+        <input type="text" id="bugDiscordName" placeholder="Your Discord">
+        <button class="animated-button" onclick="playSubmitSound(); submitBugReport()">Submit</button>
+        <button class="animated-button" onclick="playClickSound(); closeForm()">Cancel</button>
+    </div>
+
+    <audio id="hoverSound" src="sounds/hover.mp3"></audio>
+    <audio id="clickSound" src="sounds/click.mp3"></audio>
+    <audio id="submitSound" src="sounds/submit.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
